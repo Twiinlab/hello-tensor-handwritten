@@ -102,3 +102,6 @@ ENV/
 
 # Custome Ignore Folders
 /MNIST-data
+/lib
+/include
+/bin
