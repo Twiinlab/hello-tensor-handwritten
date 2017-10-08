@@ -22,5 +22,5 @@ def display(i):
 
 print("before values")
 display(0)
-raw_input('Press enter to continue: ')
+# raw_input('Press enter to continue: ')
 print("after display")
