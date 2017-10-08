@@ -20,7 +20,20 @@ def display(i):
     plt.imshow(img.reshape((28,28)), cmap=plt.cm.gray_r) 
     plt.show()   
 
-print("before values")
-display(0)
+print("Display some digits")
 # raw_input('Press enter to continue: ')
-print("after display")
+# print("after display")
+display(0)
+display(1)
+display(8)
+print len(data[0])
+
+print("Fit a Linear Classifier")
+feature_columns = learn.infer_real_valued_columns_from_input(data)
+classifier = learn.LinearClassifier(feature_columns=feature_columns, n_classes=10)
+classifier.fit(data, labels, batch_size=100, steps=1000)
+
+
+print("Evaluate accuracy")
+classifier.evaluate(test_data, test_labels)
+print classifier.evaluate(test_data, test_labels)["accuracy"]
